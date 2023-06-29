@@ -1,0 +1,170 @@
+<html lang="en">
+  <head>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="radar.js"></script>
+    <link rel="stylesheet" href="radar.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <title>Hinali' Solution</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Add New Tech
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="myForm">
+              <div class="form-group">
+                <label for="quadrant">Select the category</label>
+                    
+<select name="Select" id="quadrant">
+  <option value="0">Languages</option>
+  <option value="1">Infrastructure</option>
+  <option value="2">Data Store</option>
+  <option value="3">Data Management</option>
+</select>
+
+              </div>
+              <label for="quadrant">Select the level</label>
+              <select name="Select" id="ring">
+                <option value="0">Adopt</option>
+                <option value="1">Trial</option>
+                <option value="2">Assess</option>
+                <option value="3">Hold</option>
+              </select>
+              <div class="form-group">
+                <label for="text">Enter Technology</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="label"
+                  placeholder="Enter label"
+                  required
+                />
+              </div>
+              <!-- <div class="form-group">
+                <label for="text">Active</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="active"
+                  placeholder="Enter active"
+                  required
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label for="message">Moved</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="moved"
+                  placeholder="Enter moved"
+                  required
+                  min="0"
+                  max="1"
+                />
+              </div> -->
+              <button type="submit" class="btn btn-primary">Add</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Radar Technology</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <button
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+            type="submit"
+          >
+            Add
+          </button>
+          &nbsp;
+          <button
+            class="btn btn-primary"
+            type="submit"
+            onclick="removeLastEntry()"
+          >
+            Remove Last Enter Technology
+          </button>&nbsp;
+          <button
+            class="btn btn-primary"
+            type="submit"
+            onclick="resetToDefault()"
+          >
+            Reset to default
+          </button>
+          &nbsp;
+            <button
+            class="btn btn-danger"
+            type="submit"
+            onclick="reset()"
+          >
+            Reset 
+          </button>
+          <!-- </button> -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <button onclick="printPage()" class="btn btn-info">Print Page</button>
+         
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         
+          <button onclick="darkMode()" class="btn btn-dark btn-sm">Darkmode</button>
+          <button onclick="lightMode()" class="btn btn-light btn-sm">LightMode</button>
+       
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row"></div>
+      <div class="row">
+        <div class="col background-color: blue"><svg id="radar"></svg></div>
+      </div>
+    </div>
+    
+
+   <script src="./operations.js">
+   </script>
+   <script src="./reset_todefault.js">
+   </script>
+  </body>
+</html>

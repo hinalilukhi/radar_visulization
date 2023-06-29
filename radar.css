@@ -1,0 +1,33 @@
+body {
+  font-family: 'Source Sans Pro', arial, helvetica, sans-serif;
+  padding-bottom: 50px;
+  padding: 25px;
+  background-color: white;
+  /* color: black; */
+}
+h3 {
+  margin-top: 50px;
+}
+li {
+  margin: 25px 50px 0 0;
+}
+table {
+  width: 1400px;
+  margin: 0 50px 0 50px;
+}
+td {
+  width: 50%;
+  vertical-align: top;
+  padding-right: 60px;
+}
+
+
+.dark-mode {
+  background-color: #B7B7B7;
+  color: white;
+}
+
+.light-mode {
+  background-color: white;
+  color: black;
+}
